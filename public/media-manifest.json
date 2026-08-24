@@ -1,0 +1,74 @@
+[
+  {
+    "id": "hero-home-main",
+    "filename": "hero_robotics_competition.jpg",
+    "path": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    "source": "Unsplash Educational Curated Collection",
+    "credit": "Science & Technology Archive / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Estudantes em ambiente de competição técnica e montagem de robô industrial de alta tecnologia.",
+    "usedIn": ["/ (Home Hero)", "/programas/frc (FRC Banner)"],
+    "status": "validated"
+  },
+  {
+    "id": "fll-banner",
+    "filename": "fll_lego_robotics.jpg",
+    "path": "https://images.unsplash.com/photo-1581092160607-ee22621dd758",
+    "source": "Unsplash STEM Education Collection",
+    "credit": "STEM Education Collective / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Estudantes concentrados na montagem de mecanismos e sensores de robótica educacional de base.",
+    "usedIn": ["/programas/fll", "/ (Jornada FLL Card)"],
+    "status": "validated"
+  },
+  {
+    "id": "ftc-banner",
+    "filename": "ftc_chassis_engineering.jpg",
+    "path": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    "source": "Unsplash Robotics Lab Collection",
+    "credit": "Robotics Engineering Lab / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Robô com chassi estrutural de alumínio e fiação elétrica de precisão em laboratório.",
+    "usedIn": ["/programas/ftc", "/ (Jornada FTC Card)"],
+    "status": "validated"
+  },
+  {
+    "id": "editorial-workshop",
+    "filename": "workshop_collaboration.jpg",
+    "path": "https://images.unsplash.com/photo-1581092335397-9583fe92d232",
+    "source": "Unsplash Makerspace Archive",
+    "credit": "Makerspace & Engineering Archive / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Oficina mecânica com bancada de testes, ferramentas de precisão e engrenagens.",
+    "usedIn": ["/ (Destaque Institucional)", "/sobre (Oficina)"],
+    "status": "validated"
+  },
+  {
+    "id": "team-collaboration-impact",
+    "filename": "students_team_discussion.jpg",
+    "path": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "source": "Unsplash Teamwork Archive",
+    "credit": "Teamwork & Education Collective / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Jovens em reunião de planejamento tático e análise de caderno de engenharia.",
+    "usedIn": ["/impacto", "/equipes"],
+    "status": "validated"
+  },
+  {
+    "id": "closing-team-photo",
+    "filename": "robotics_team_celebration.jpg",
+    "path": "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+    "source": "Unsplash STEM Youth Archive",
+    "credit": "STEM Youth Collective / Unsplash Free License",
+    "authorization": "Permitted for web editorial and institutional preview",
+    "dateAccessed": "2026-08-24",
+    "description": "Fotografia ampla de equipe celebrando a conclusão do projeto e a cooperação na arena.",
+    "usedIn": ["/ (Encerramento Home)", "/sobre (Propósito)"],
+    "status": "validated"
+  }
+]

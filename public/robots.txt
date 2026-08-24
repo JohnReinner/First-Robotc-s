@@ -1,0 +1,6 @@
+# FIRST Brasília - Robótica Educacional
+User-agent: *
+Disallow: /admin/
+Allow: /
+
+Sitemap: /sitemap.xml

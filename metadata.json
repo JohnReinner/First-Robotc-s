@@ -1,0 +1,6 @@
+{
+  "name": "FIRST Brasília",
+  "description": "Portal institucional dos programas de robótica educacional FIRST em Brasília/DF, com destaque para a jornada FLL, FTC e FRC e as equipes Federal Force e Robot's District.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
