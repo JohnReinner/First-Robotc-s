@@ -120,8 +120,19 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6">
               <div className="relative border border-gray-200 bg-gray-100 group overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
-                  alt="Estudantes em oficina de robótica realizando montagem técnica e testes de engrenagens"
+                  src="/WhatsApp Image 2026-08-24 at 15.10.37.jpeg"
+                  alt="Estudantes na bancada de engenharia e montagem de robótica"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    // Try alternative filename format if the first fails
+                    const target = e.currentTarget;
+                    if (target.src.includes('WhatsApp%20Image')) {
+                      target.src = encodeURI('/Imagem do WhatsApp 2026-08-24 às 15:10:37.jpeg');
+                    } else {
+                      // Fallback if not yet present in public directory
+                      target.src = 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80';
+                    }
+                  }}
                   className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
@@ -455,12 +466,22 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
         aria-labelledby="closing-section-title"
       >
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1800&q=80"
-            alt="Equipe reunida em celebração e trabalho conjunto na robótica educacional"
-            className="w-full h-full object-cover object-center filter brightness-40"
-          />
-          <div className="absolute inset-0 bg-[#031b46]/80" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-center"
+          >
+            <source src={encodeURI("/Video Robô.mp4")} type="video/mp4" />
+            <source src="/Video Robô.mp4" type="video/mp4" />
+            <source src="/Vídeo Robô.mp4" type="video/mp4" />
+            <source src={encodeURI("/Vídeo Robô.mp4")} type="video/mp4" />
+            <source src="/Video Robo.mp4" type="video/mp4" />
+            <source src="/video-robo.mp4" type="video/mp4" />
+          </video>
+          {/* Filtro azul institucional */}
+          <div className="absolute inset-0 bg-[#031b46]/80 backdrop-brightness-90 pointer-events-none" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-12">
