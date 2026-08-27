@@ -266,13 +266,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </a>
         </div>
 
-        {/* Bottom Bar with Back to Top Button */}
+        {/* Bottom Bar with Developer Credits and Back to Top Button */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-          <div>
-            © {new Date().getFullYear()} FIRST Brasília. Todos os direitos reservados.
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 text-center sm:text-left">
+            <span>© {new Date().getFullYear()} FIRST Brasília. Todos os direitos reservados.</span>
+            <span className="hidden sm:inline text-gray-600" aria-hidden="true">•</span>
+            <span className="text-gray-300 font-medium normal-case tracking-normal">
+              Desenvolvido por <strong className="text-white font-semibold">John Reinner</strong> &amp; <strong className="text-white font-semibold">Mateus Araujo</strong>
+            </span>
           </div>
 
           <button
+            id="back-to-top-btn"
             type="button"
             onClick={scrollToTop}
             className="flex items-center gap-1.5 text-gray-300 hover:text-white font-black text-xs uppercase tracking-widest transition-colors px-3 py-1.5 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white"
