@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="100%" height="100%">
+  <defs>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- FIRST Graphic Emblem -->
+  <g id="first-emblem" filter="url(#subtle-shadow)">
+    <!-- Red Triangle (Left) -->
+    <polygon points="12,78 46,14 80,78" fill="#ED1C24" stroke="#D0151C" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="26,72 46,32 66,72" fill="#FFFFFF" />
+
+    <!-- Blue Diamond (Right) -->
+    <polygon points="106,12 138,44 106,76 74,44" fill="#0066B2" stroke="#004D86" stroke-width="1.5" stroke-linejoin="round" />
+    <polygon points="106,24 126,44 106,64 86,44" fill="#FFFFFF" />
+
+    <!-- Interlocking Circular White Ribbon with Subtle Shadow -->
+    <path d="M 44,48 C 44,30 62,22 78,32 C 90,40 92,60 76,70 C 60,80 44,68 44,48 Z" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
+    <path d="M 44,48 C 44,30 62,22 78,32 C 90,40 92,60 76,70 C 60,80 44,68 44,48 Z" fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Wordmark "FIRST" -->
+  <g id="first-text" transform="translate(154, 70)">
+    <text font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-style="italic" font-size="64" fill="#111827" letter-spacing="-2">FIRST<tspan font-size="28" font-style="normal" dy="-26">®</tspan></text>
+  </g>
+</svg>

@@ -22,16 +22,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
           {/* Column 1: Brand & Site Map */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#003da5] flex items-center justify-center text-white font-black italic text-xl border border-white/20">
-                F
+            <div className="flex flex-col gap-3 mb-4">
+              <div className="flex items-center gap-3 bg-white p-2.5 rounded shadow-sm w-fit">
+                <img
+                  src="/first-logo.svg"
+                  alt="Logo oficial FIRST"
+                  className="h-7 w-auto object-contain"
+                />
+                <div className="h-5 w-px bg-gray-300" />
+                <img
+                  src="/senai-logo.svg"
+                  alt="Logo oficial SENAI"
+                  className="h-5 w-auto object-contain"
+                />
               </div>
               <div>
-                <span className="font-black text-lg uppercase tracking-tight leading-none block font-heading text-white">
+                <span className="font-black text-base uppercase tracking-tight leading-none block font-heading text-white">
                   FIRST BRASÍLIA
                 </span>
                 <span className="text-[10px] text-gray-400 font-mono font-bold uppercase tracking-widest mt-1 block">
-                  Robótica Educacional
+                  SESI SENAI Taguatinga / DF
                 </span>
               </div>
             </div>

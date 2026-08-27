@@ -115,22 +115,32 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-12 flex items-center justify-between">
-          {/* Institutional Geometric Brand Logo */}
+          {/* Institutional FIRST & SENAI Logos */}
           <button
             type="button"
             onClick={() => handleNavClick('/')}
-            className="group flex items-center gap-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003da5] p-1"
-            aria-label="FIRST Brasília - Ir para a página inicial"
+            className="group flex items-center gap-3.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003da5] p-1"
+            aria-label="FIRST Brasília e SENAI - Ir para a página inicial"
           >
-            <div className="w-10 h-10 bg-[#003da5] flex items-center justify-center font-black text-white italic text-xl shadow-sm group-hover:bg-[#052d6e] transition-colors">
-              F
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/first-logo.svg"
+                alt="Logo oficial FIRST"
+                className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+              <div className="h-6 w-px bg-gray-300" aria-hidden="true" />
+              <img
+                src="/senai-logo.svg"
+                alt="Logo oficial SENAI"
+                className="h-6 sm:h-7 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tighter text-[#003da5] leading-none uppercase font-heading">
-                FIRST
+            <div className="hidden xl:flex flex-col border-l border-gray-200 pl-3">
+              <span className="font-mono font-bold text-[10px] tracking-[0.2em] text-[#003da5] leading-none uppercase">
+                Taguatinga / DF
               </span>
-              <span className="font-bold text-xs tracking-[0.2em] text-[#596579] leading-none uppercase mt-0.5">
-                ROBOTC'S
+              <span className="font-black text-xs tracking-wider text-gray-800 uppercase mt-0.5">
+                Robótica Educacional
               </span>
             </div>
           </button>
@@ -319,17 +329,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
             {/* Drawer Header */}
             <div className="flex items-center justify-between pb-4 border-b border-gray-100">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 bg-[#003da5] flex items-center justify-center text-white font-black text-lg italic">
-                  F
-                </div>
-                <div>
-                  <span className="font-black text-base uppercase tracking-tight block leading-tight font-heading text-[#003da5]">
-                    FIRST BRASÍLIA
-                  </span>
-                  <span className="text-[10px] text-gray-500 font-mono uppercase tracking-wider">
-                    Taguatinga / DF
-                  </span>
-                </div>
+                <img
+                  src="/first-logo.svg"
+                  alt="Logo FIRST"
+                  className="h-7 w-auto object-contain"
+                />
+                <div className="h-5 w-px bg-gray-300" />
+                <img
+                  src="/senai-logo.svg"
+                  alt="Logo SENAI"
+                  className="h-5 w-auto object-contain"
+                />
               </div>
 
               <button

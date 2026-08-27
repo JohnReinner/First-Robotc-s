@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, ChevronRight, Cpu, ShieldCheck, Instagram, ExternalLink, Lightbulb, Flame, MessageSquare, Users } from 'lucide-react';
+import { ArrowRight, ChevronRight, Cpu, ShieldCheck, Instagram, ExternalLink, Lightbulb, Flame, MessageSquare, Users, Video as VideoIcon } from 'lucide-react';
 import { SectionHeader } from '../components/SectionHeader';
+import { RobotHero3D } from '../components/RobotHero3D';
 import { PROGRAMS_DATA, TEAMS_DATA, COMPETENCIES_DATA } from '../data/contentData';
 
 interface HomeViewProps {
@@ -10,66 +11,116 @@ interface HomeViewProps {
 export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
   return (
     <div className="w-full">
-      {/* 8.1 Hero Section - Geometric Balance Theme */}
+      {/* 8.1 Hero Section - Geometric Balance & 3D Interactive Robot */}
       <section
         className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center bg-[#031b46] text-white overflow-hidden pt-28 pb-20"
         aria-labelledby="hero-title"
       >
-        {/* Background Image with Controlled Dark Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85"
-            alt="Estudantes de robótica concentrados na montagem e calibragem de um robô industrial"
-            className="w-full h-full object-cover object-center"
-            loading="eager"
+        {/* Subtle Tech Grid and Radial Lighting Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#031b46] via-[#042459] to-[#021435]" />
+          <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00f2ff]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#e31937]/15 rounded-full blur-3xl pointer-events-none" />
+          <div 
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)',
+              backgroundSize: '28px 28px'
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#031b46]/95 via-[#031b46]/85 to-[#031b46]/70" />
-          <div className="absolute inset-0 bg-[#031b46]/40" />
         </div>
 
         {/* Hero Content Container */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-12 w-full">
-          <div className="max-w-3xl">
-            {/* Geometric Accent Line + Eyebrow */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-1 bg-[#e31937]" aria-hidden="true" />
-              <span className="text-white font-mono font-bold text-xs tracking-[0.25em] uppercase">
-                Robótica Educacional • Brasília/DF
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Text & CTAs */}
+            <div className="lg:col-span-7">
+              {/* Geometric Accent Line + Eyebrow */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-1 bg-[#e31937]" aria-hidden="true" />
+                <span className="text-white font-mono font-bold text-xs tracking-[0.25em] uppercase">
+                  Robótica Educacional • Brasília/DF
+                </span>
+              </div>
+
+              {/* Main H1 Title */}
+              <h1
+                id="hero-title"
+                className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[0.95] mb-6 uppercase tracking-tight font-heading"
+              >
+                Transformando Jovens Através da Robótica
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-normal max-w-2xl mb-8">
+                Construindo os líderes e inovadores de amanhã com a metodologia FIRST através da jornada integrada FLL, FTC e FRC no Distrito Federal.
+              </p>
+
+              {/* Geometric CTAs */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/programas')}
+                  className="bg-[#e31937] hover:bg-[#c1152e] text-white px-8 py-3.5 text-xs font-black uppercase tracking-widest transition-all shadow-sm flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  <span>Conheça os Programas</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/equipes')}
+                  className="border-2 border-white text-white px-8 py-3.5 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-[#031b46] transition-all flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  <span>Conheça as Equipes</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
 
-            {/* Main H1 Title */}
-            <h1
-              id="hero-title"
-              className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[0.95] mb-6 uppercase tracking-tight font-heading"
-            >
-              Transformando Jovens Através da Robótica
-            </h1>
+            {/* Right Column: Interactive 3D Robot Mascot */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
+              <div className="w-full h-[380px] sm:h-[460px] relative">
+                <RobotHero3D />
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-md px-3 py-1 border border-white/10 rounded-full text-[10px] text-gray-300 font-mono tracking-wider flex items-center gap-2 pointer-events-none">
+                  <span className="w-2 h-2 rounded-full bg-[#00f2ff] animate-pulse" />
+                  <span>3D TRACKING ATIVO • MOVA O MOUSE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-normal max-w-2xl mb-8">
-              Construindo os líderes e inovadores de amanhã com a metodologia FIRST através da jornada integrada FLL, FTC e FRC no Distrito Federal.
-            </p>
+      {/* Institutional Partnership Ribbon - FIRST & SENAI */}
+      <section className="bg-white border-b border-gray-200 py-6 px-4 sm:px-12" aria-label="Aliança Institucional">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <div className="w-2.5 h-2.5 bg-[#003da5]" />
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#052d6e]">
+              Aliança Oficial de Robótica Educacional
+            </span>
+          </div>
 
-            {/* Geometric CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button
-                type="button"
-                onClick={() => onNavigate('/programas')}
-                className="bg-[#e31937] hover:bg-[#c1152e] text-white px-8 py-3.5 text-xs font-black uppercase tracking-widest transition-all shadow-sm flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                <span>Conheça os Programas</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            {/* FIRST Official Logo */}
+            <div className="flex items-center gap-3 group">
+              <img
+                src="/first-logo.svg"
+                alt="FIRST - For Inspiration and Recognition of Science and Technology"
+                className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+            </div>
 
-              <button
-                type="button"
-                onClick={() => onNavigate('/equipes')}
-                className="border-2 border-white text-white px-8 py-3.5 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-[#031b46] transition-all flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                <span>Conheça as Equipes</span>
-                <ChevronRight className="w-4 h-4" />
-              </button>
+            <div className="h-8 w-px bg-gray-200 hidden sm:block" />
+
+            {/* SENAI Official Logo */}
+            <div className="flex items-center gap-3 group">
+              <img
+                src="/senai-logo.svg"
+                alt="SENAI - Serviço Nacional de Aprendizagem Industrial"
+                className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </div>
           </div>
         </div>
@@ -116,30 +167,16 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Editorial Photo Side */}
+            {/* Editorial YouTube Video Side */}
             <div className="lg:col-span-6">
-              <div className="relative border border-gray-200 bg-gray-100 group overflow-hidden">
-                <img
-                  src="/WhatsApp Image 2026-08-24 at 15.10.37.jpeg"
-                  alt="Estudantes na bancada de engenharia e montagem de robótica"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    // Try alternative filename format if the first fails
-                    const target = e.currentTarget;
-                    if (target.src.includes('WhatsApp%20Image')) {
-                      target.src = encodeURI('/Imagem do WhatsApp 2026-08-24 às 15:10:37.jpeg');
-                    } else {
-                      // Fallback if not yet present in public directory
-                      target.src = 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80';
-                    }
-                  }}
-                  className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-500"
+              <div className="relative border border-gray-200 bg-gray-950 group overflow-hidden shadow-sm aspect-video sm:h-[420px] w-full">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/j8wz5vw5XfE?autoplay=1&mute=1&loop=1&playlist=j8wz5vw5XfE&rel=0&modestbranding=1"
+                  title="Vídeo de Robótica FIRST Championship no YouTube"
+                  className="w-full h-full object-cover border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
-                  <p className="text-xs text-white font-medium">
-                    Oficina e laboratório: onde a teoria das ciências exatas se transforma em protótipos funcionais.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
